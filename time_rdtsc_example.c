@@ -5,8 +5,8 @@
 int main(int argc, char *argv[])
 {
 	// Call init_rdtsc for initialization 
-	init_rdtsc(1, 0);  // either auto calibration 
-	init_rdtsc(0, RDTSC_TYPICAL_TICKS_PER_NS); // or by passing TYPICAL TICKS OF PROC PER NS
+	init_rdtsc(0, RDTSC_TYPICAL_TICKS_PER_NS); // either by passing TYPICAL TICKS OF PROC PER NS
+	init_rdtsc(1, 0);  // or auto calibration 
 
 	struct timespec timer;
 	get_rdtsc_timespec(&timer); //Initialize with current time
